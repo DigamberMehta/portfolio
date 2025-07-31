@@ -1,20 +1,10 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  color: string;
-  opacity: number;
-}
-
 export const ParticleField = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<Particle[]>([]);
-  const animationRef = useRef<number>();
+  const canvasRef = useRef(null);
+  const particlesRef = useRef([]);
+  const animationRef = useRef();
 
   useEffect(() => {
     const canvas = canvasRef.current;

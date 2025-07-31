@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-export const useScrollSpy = (sectionIds: string[], offset: number = 100) => {
-  const [activeSection, setActiveSection] = useState('');
+export const useScrollSpy = (sectionIds, offset = 100) => {
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +16,10 @@ export const useScrollSpy = (sectionIds: string[], offset: number = 100) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll(); // Call once to set initial state
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [sectionIds, offset]);
 
   return activeSection;

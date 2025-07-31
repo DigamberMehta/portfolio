@@ -4,7 +4,10 @@ import { personalInfo } from "../data/portfolio";
 
 export const Hero = () => {
   const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById("projects");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const glitchVariants = {

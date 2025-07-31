@@ -1,7 +1,15 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
-import { personalInfo } from '../data/portfolio';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
+import { personalInfo } from "../data/portfolio";
 
 export const Contact = () => {
   const { ref, inView } = useInView({
@@ -10,16 +18,16 @@ export const Contact = () => {
   });
 
   const socialLinks = [
-    { icon: Github, href: personalInfo.github, label: 'GitHub' },
-    { icon: Linkedin, href: personalInfo.linkedin, label: 'LinkedIn' },
-    { icon: Twitter, href: personalInfo.twitter, label: 'Twitter' },
+    { icon: Github, href: personalInfo.github, label: "GitHub" },
+    { icon: Linkedin, href: personalInfo.linkedin, label: "LinkedIn" },
+    { icon: Twitter, href: personalInfo.twitter, label: "Twitter" },
   ];
 
   return (
     <section id="contact" ref={ref} className="py-20 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-cyan-900/20" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -33,7 +41,8 @@ export const Contact = () => {
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ready to turn your ideas into reality? Let's discuss your next project
+            Ready to turn your ideas into reality? Let's discuss your next
+            project
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full mt-6" />
         </motion.div>
@@ -47,18 +56,30 @@ export const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Get in Touch
+              </h3>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, creative projects, 
-                or just having a chat about technology and innovation.
+                I'm always open to discussing new opportunities, creative
+                projects, or just having a chat about technology and innovation.
               </p>
             </div>
 
             {/* Contact Details */}
             <div className="space-y-6">
               {[
-                { icon: Mail, label: 'Email', value: personalInfo.email, href: `mailto:${personalInfo.email}` },
-                { icon: MapPin, label: 'Location', value: personalInfo.location, href: '#' },
+                {
+                  icon: Mail,
+                  label: "Email",
+                  value: personalInfo.email,
+                  href: `mailto:${personalInfo.email}`,
+                },
+                {
+                  icon: MapPin,
+                  label: "Location",
+                  value: personalInfo.location,
+                  href: "#",
+                },
               ].map((item, index) => (
                 <motion.div
                   key={item.label}
@@ -80,7 +101,9 @@ export const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
+              <h4 className="text-lg font-semibold text-white mb-4">
+                Follow Me
+              </h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -166,7 +189,8 @@ export const Contact = () => {
           className="text-center mt-16 pt-8 border-t border-gray-800"
         >
           <p className="text-gray-400">
-            © 2024 {personalInfo.name}. Built with React, Three.js & Framer Motion
+            © 2024 {personalInfo.name}. Built with React, Three.js & Framer
+            Motion
           </p>
         </motion.div>
       </div>

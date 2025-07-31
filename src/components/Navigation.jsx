@@ -1,43 +1,54 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useScrollSpy } from '../hooks/useScrollSpy';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Moon, Sun, Menu, X } from "lucide-react";
 
-interface NavigationProps {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
-}
-
-export const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
+export const Navigation = ({ darkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
-  const sections = ['hero', 'about', 'projects', 'tech', 'contact'];
-  const activeSection = useScrollSpy(sections);
+  const [activeSection, setActiveSection] = useState("hero");
+
+  const sections = ["hero", "about", "projects", "tech", "contact"];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Simple scroll spy implementation
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
   };
 
   const navItems = [
-    { id: 'hero', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'tech', label: 'Tech Stack' },
-    { id: 'contact', label: 'Contact' },
+    { id: "hero", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "projects", label: "Projects" },
+    { id: "tech", label: "Tech Stack" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
@@ -46,8 +57,8 @@ export const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-gray-900/80 backdrop-blur-lg border-b border-gray-800/50'
-          : 'bg-transparent'
+          ? "bg-gray-900/80 backdrop-blur-lg border-b border-gray-800/50"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +67,7 @@ export const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
           <motion.div
             className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent cursor-hover"
             whileHover={{ scale: 1.05 }}
-            onClick={() => scrollToSection('hero')}
+            onClick={() => scrollToSection("hero")}
           >
             AC
           </motion.div>
@@ -68,8 +79,8 @@ export const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
                 key={item.id}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors cursor-hover ${
                   activeSection === item.id
-                    ? 'text-cyan-400'
-                    : 'text-gray-300 hover:text-white'
+                    ? "text-cyan-400"
+                    : "text-gray-300 hover:text-white"
                 }`}
                 whileHover={{ scale: 1.05 }}
                 onClick={() => scrollToSection(item.id)}
@@ -123,7 +134,7 @@ export const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
         initial={{ opacity: 0, height: 0 }}
         animate={{
           opacity: isMobileMenuOpen ? 1 : 0,
-          height: isMobileMenuOpen ? 'auto' : 0,
+          height: isMobileMenuOpen ? "auto" : 0,
         }}
         className="md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-gray-800/50 overflow-hidden"
       >
@@ -133,8 +144,8 @@ export const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
               key={item.id}
               className={`block w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors cursor-hover ${
                 activeSection === item.id
-                  ? 'text-cyan-400 bg-gray-800/50'
-                  : 'text-gray-300 hover:text-white hover:bg-gray-800/30'
+                  ? "text-cyan-400 bg-gray-800/50"
+                  : "text-gray-300 hover:text-white hover:bg-gray-800/30"
               }`}
               whileHover={{ x: 4 }}
               onClick={() => scrollToSection(item.id)}

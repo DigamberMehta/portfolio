@@ -2,19 +2,10 @@
  * Utility functions for WebGL support detection
  */
 
-export interface WebGLSupport {
-  supported: boolean;
-  context?: WebGLRenderingContext | null;
-  vendor?: string;
-  renderer?: string;
-  version?: string;
-  error?: string;
-}
-
 /**
  * Detects WebGL support and returns detailed information
  */
-export function detectWebGLSupport(): WebGLSupport {
+export function detectWebGLSupport() {
   const canvas = document.createElement("canvas");
 
   try {
@@ -57,14 +48,14 @@ export function detectWebGLSupport(): WebGLSupport {
 /**
  * Checks if WebGL is available and working
  */
-export function isWebGLAvailable(): boolean {
+export function isWebGLAvailable() {
   return detectWebGLSupport().supported;
 }
 
 /**
  * Gets a human-readable description of WebGL support
  */
-export function getWebGLSupportDescription(): string {
+export function getWebGLSupportDescription() {
   const support = detectWebGLSupport();
 
   if (!support.supported) {

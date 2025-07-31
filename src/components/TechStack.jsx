@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { techStack } from '../data/portfolio';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { techStack } from "../data/portfolio";
 
 export const TechStack = () => {
   const { ref, inView } = useInView({
@@ -12,7 +12,7 @@ export const TechStack = () => {
     <section id="tech" ref={ref} className="py-20 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-cyan-900/10" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -42,19 +42,19 @@ export const TechStack = () => {
               <h3 className="text-2xl font-bold text-white mb-8 text-center">
                 {category.category}
               </h3>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 {category.technologies.map((tech, techIndex) => (
                   <motion.div
                     key={tech.name}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={inView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ 
-                      duration: 0.5, 
-                      delay: categoryIndex * 0.2 + techIndex * 0.1 
+                    transition={{
+                      duration: 0.5,
+                      delay: categoryIndex * 0.2 + techIndex * 0.1,
                     }}
                     className="bg-gray-800/30 backdrop-blur-lg border border-gray-700 rounded-2xl p-6 text-center cursor-hover group hover:border-cyan-400/50 transition-all duration-300"
-                    whileHover={{ 
+                    whileHover={{
                       y: -10,
                       scale: 1.05,
                       rotateY: 10,
@@ -74,12 +74,12 @@ export const TechStack = () => {
                     >
                       {tech.icon}
                     </motion.div>
-                    
+
                     <h4 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
                       {tech.name}
                     </h4>
-                    
-                    <div 
+
+                    <div
                       className="w-full h-1 rounded-full bg-gray-700 group-hover:bg-opacity-50 transition-all"
                       style={{ backgroundColor: `${tech.color}20` }}
                     >
@@ -87,10 +87,10 @@ export const TechStack = () => {
                         className="h-full rounded-full"
                         style={{ backgroundColor: tech.color }}
                         initial={{ width: 0 }}
-                        animate={inView ? { width: '100%' } : {}}
-                        transition={{ 
-                          duration: 1, 
-                          delay: categoryIndex * 0.2 + techIndex * 0.1 + 0.5 
+                        animate={inView ? { width: "100%" } : {}}
+                        transition={{
+                          duration: 1,
+                          delay: categoryIndex * 0.2 + techIndex * 0.1 + 0.5,
                         }}
                       />
                     </div>
@@ -122,7 +122,11 @@ export const TechStack = () => {
                 ease: "linear",
               }}
             >
-              {['⚛️', '📘', '🐍', '☁️', '🔥', '⚡'][Math.floor(Math.random() * 6)]}
+              {
+                ["⚛️", "📘", "🐍", "☁️", "🔥", "⚡"][
+                  Math.floor(Math.random() * 6)
+                ]
+              }
             </motion.div>
           ))}
         </div>

@@ -3,10 +3,10 @@ import * as THREE from "three";
 import { detectWebGLSupport } from "../utils/webglSupport";
 
 export const ThreeBackground = () => {
-  const mountRef = useRef<HTMLDivElement>(null);
-  const sceneRef = useRef<THREE.Scene>();
-  const rendererRef = useRef<THREE.WebGLRenderer>();
-  const animationIdRef = useRef<number>();
+  const mountRef = useRef(null);
+  const sceneRef = useRef();
+  const rendererRef = useRef();
+  const animationIdRef = useRef();
   const [webglError, setWebglError] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export const ThreeBackground = () => {
       camera.position.z = 5;
 
       // Renderer setup with error handling
-      let renderer: THREE.WebGLRenderer;
+      let renderer;
       try {
         renderer = new THREE.WebGLRenderer({
           antialias: true,
@@ -105,7 +105,7 @@ export const ThreeBackground = () => {
         }),
       ];
 
-      const meshes: THREE.Mesh[] = [];
+      const meshes = [];
 
       // Create fewer objects for better performance
       for (let i = 0; i < 15; i++) {
@@ -125,7 +125,7 @@ export const ThreeBackground = () => {
         mesh.rotation.y = Math.random() * Math.PI;
 
         // Store random rotation speeds
-        (mesh as any).rotationSpeed = {
+        mesh.rotationSpeed = {
           x: (Math.random() - 0.5) * 0.01, // Reduced speed
           y: (Math.random() - 0.5) * 0.01,
           z: (Math.random() - 0.5) * 0.01,
@@ -166,7 +166,7 @@ export const ThreeBackground = () => {
 
           // Rotate meshes
           meshes.forEach((mesh) => {
-            const speed = (mesh as any).rotationSpeed;
+            const speed = mesh.rotationSpeed;
             mesh.rotation.x += speed.x;
             mesh.rotation.y += speed.y;
             mesh.rotation.z += speed.z;

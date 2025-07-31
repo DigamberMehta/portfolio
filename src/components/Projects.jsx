@@ -57,6 +57,7 @@ export const Projects = () => {
                 {/* Animated background pattern */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
                   <img

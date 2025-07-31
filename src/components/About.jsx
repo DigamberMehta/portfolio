@@ -19,8 +19,8 @@ export const About = () => {
     triggerOnce: true,
   });
 
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const floatingElementsRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef([]);
+  const floatingElementsRef = useRef(null);
 
   const stats = [
     {
@@ -51,7 +51,7 @@ export const About = () => {
 
   // 3D mouse tracking effect
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
@@ -78,9 +78,9 @@ export const About = () => {
           const speed = ((index % 3) + 1) * 0.5;
           const x = (clientX - centerX) * speed * 0.01;
           const y = (clientY - centerY) * speed * 0.01;
-          (
-            element as HTMLElement
-          ).style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.1}deg)`;
+          element.style.transform = `translate(${x}px, ${y}px) rotate(${
+            x * 0.1
+          }deg)`;
         });
       }
     };
