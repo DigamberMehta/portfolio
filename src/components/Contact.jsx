@@ -1,122 +1,151 @@
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { personalInfo } from "../data/portfolio";
 import {
   Mail,
-  Phone,
   MapPin,
+  Phone,
   Send,
+  User,
+  MessageSquare,
+  ArrowRight,
   Github,
   Linkedin,
   Twitter,
 } from "lucide-react";
-import { personalInfo } from "../data/portfolio";
 
 export const Contact = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-    triggerOnce: true,
-  });
-
-  const socialLinks = [
-    { icon: Github, href: personalInfo.github, label: "GitHub" },
-    { icon: Linkedin, href: personalInfo.linkedin, label: "LinkedIn" },
-    { icon: Twitter, href: personalInfo.twitter, label: "Twitter" },
-  ];
-
   return (
-    <section id="contact" ref={ref} className="py-20 relative overflow-hidden">
+    <section id="contact" className="py-20 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-cyan-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-cyan-900/20" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Let's Connect
+              Get In Touch
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ready to turn your ideas into reality? Let's discuss your next
-            project
+            Ready to start your next project? Let's discuss how I can help bring
+            your ideas to life.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full mt-6" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Info */}
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">
-                Get in Touch
+                Let's Connect
               </h3>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, creative
-                projects, or just having a chat about technology and innovation.
+              <p className="text-gray-400 mb-8 leading-relaxed">
+                I'm always excited to work on new projects and collaborate with
+                amazing teams. Whether you have a specific project in mind or
+                just want to chat about technology, I'd love to hear from you.
               </p>
             </div>
 
             {/* Contact Details */}
             <div className="space-y-6">
-              {[
-                {
-                  icon: Mail,
-                  label: "Email",
-                  value: personalInfo.email,
-                  href: `mailto:${personalInfo.email}`,
-                },
-                {
-                  icon: MapPin,
-                  label: "Location",
-                  value: personalInfo.location,
-                  href: "#",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-4 p-4 bg-gray-800/30 backdrop-blur-lg border border-gray-700 rounded-xl cursor-hover hover:border-cyan-400/50 transition-all"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center">
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">{item.label}</p>
-                    <p className="text-white font-medium">{item.value}</p>
-                  </div>
-                </motion.div>
-              ))}
+              <motion.div
+                className="flex items-center gap-4 p-4 bg-gray-800/30 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"
+                whileHover={{ scale: 1.02, x: 5 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold">Email</h4>
+                  <p className="text-gray-400">{personalInfo.email}</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center gap-4 p-4 bg-gray-800/30 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"
+                whileHover={{ scale: 1.02, x: 5 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-purple-400" />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold">Location</h4>
+                  <p className="text-gray-400">{personalInfo.location}</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center gap-4 p-4 bg-gray-800/30 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"
+                whileHover={{ scale: 1.02, x: 5 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-green-400" />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold">Experience</h4>
+                  <p className="text-gray-400">
+                    {personalInfo.experience} in the industry
+                  </p>
+                </div>
+              </motion.div>
             </div>
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4">
-                Follow Me
-              </h4>
+              <h4 className="text-white font-semibold mb-4">Follow Me</h4>
               <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
+                {[
+                  { icon: Github, href: personalInfo.github, label: "GitHub" },
+                  {
+                    icon: Linkedin,
+                    href: personalInfo.linkedin,
+                    label: "LinkedIn",
+                  },
+                  {
+                    icon: Twitter,
+                    href: personalInfo.twitter,
+                    label: "Twitter",
+                  },
+                ].map((social, index) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-gradient-to-br hover:from-cyan-400 hover:to-purple-500 transition-all cursor-hover"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/20 transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                    viewport={{ once: true }}
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className="w-6 h-6" />
                   </motion.a>
                 ))}
               </div>
@@ -125,74 +154,98 @@ export const Contact = () => {
 
           {/* Contact Form */}
           <motion.div
+            className="relative"
             initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-gray-800/30 backdrop-blur-lg border border-gray-700 rounded-2xl p-8"
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-white font-medium">Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors cursor-hover"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-white font-medium">Email</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors cursor-hover"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
+            {/* Form glow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 hover:opacity-100 transition-opacity duration-300" />
 
-              <div className="space-y-2">
-                <label className="text-white font-medium">Subject</label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors cursor-hover"
-                  placeholder="Project discussion"
-                />
-              </div>
+            <div className="relative bg-gray-800/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 shadow-2xl">
+              {/* Animated background pattern */}
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition-all duration-300 rounded-2xl" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-2xl" />
 
-              <div className="space-y-2">
-                <label className="text-white font-medium">Message</label>
-                <textarea
-                  rows={6}
-                  className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors resize-none cursor-hover"
-                  placeholder="Tell me about your project..."
-                />
-              </div>
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  Send a Message
+                </h3>
 
-              <motion.button
-                type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all cursor-hover flex items-center justify-center gap-2"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Send className="w-5 h-5" />
-                Send Message
-              </motion.button>
-            </form>
+                <form className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
+                      viewport={{ once: true }}
+                    >
+                      <label className="block text-gray-300 text-sm font-medium mb-2">
+                        <User className="w-4 h-4 inline mr-2" />
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                        placeholder="Your name"
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      <label className="block text-gray-300 text-sm font-medium mb-2">
+                        <Mail className="w-4 h-4 inline mr-2" />
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                        placeholder="your@email.com"
+                      />
+                    </motion.div>
+                  </div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    viewport={{ once: true }}
+                  >
+                    <label className="block text-gray-300 text-sm font-medium mb-2">
+                      <MessageSquare className="w-4 h-4 inline mr-2" />
+                      Message
+                    </label>
+                    <textarea
+                      rows={6}
+                      className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+                      placeholder="Tell me about your project..."
+                    />
+                  </motion.div>
+
+                  <motion.button
+                    type="submit"
+                    className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2"
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                  >
+                    <Send className="w-5 h-5" />
+                    Send Message
+                    <ArrowRight className="w-5 h-5" />
+                  </motion.button>
+                </form>
+              </div>
+            </div>
           </motion.div>
         </div>
-
-        {/* Footer */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-16 pt-8 border-t border-gray-800"
-        >
-          <p className="text-gray-400">
-            © 2024 {personalInfo.name}. Built with React, Three.js & Framer
-            Motion
-          </p>
-        </motion.div>
       </div>
     </section>
   );

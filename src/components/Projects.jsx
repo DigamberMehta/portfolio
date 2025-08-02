@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { ExternalLink, Github, Play } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  Play,
+  Star,
+  Rocket,
+  Code,
+  Globe,
+} from "lucide-react";
 import { projects } from "../data/portfolio";
 
 export const Projects = () => {
@@ -82,7 +90,7 @@ export const Projects = () => {
                         whileTap={{ scale: 0.95 }}
                         className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg font-medium cursor-hover"
                       >
-                        <Github className="w-4 h-4" />
+                        <Code className="w-4 h-4" />
                         Code
                       </motion.button>
                     </div>
@@ -91,7 +99,8 @@ export const Projects = () => {
                   {/* Featured Badge */}
                   {project.featured && (
                     <div className="absolute top-4 right-4">
-                      <span className="px-3 py-1 bg-gradient-to-r from-cyan-400 to-purple-500 text-white text-xs font-bold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-cyan-400 to-purple-500 text-white text-xs font-bold rounded-full flex items-center gap-1">
+                        <Star className="w-3 h-3" />
                         Featured
                       </span>
                     </div>
@@ -127,7 +136,7 @@ export const Projects = () => {
                       className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-hover"
                       whileHover={{ x: 4 }}
                     >
-                      <ExternalLink className="w-4 h-4" />
+                      <Globe className="w-4 h-4" />
                       Live Demo
                     </motion.a>
                     <motion.a
@@ -153,10 +162,11 @@ export const Projects = () => {
           className="text-center mt-12"
         >
           <motion.button
-            className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-gray-900 transition-all cursor-hover"
+            className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-gray-900 transition-all cursor-hover flex items-center gap-2 mx-auto"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
+            <Rocket className="w-5 h-5" />
             View All Projects
           </motion.button>
         </motion.div>
