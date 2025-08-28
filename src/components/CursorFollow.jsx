@@ -6,43 +6,40 @@ export const CursorFollow = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    // Only run in browser
+    if (typeof window === "undefined") return;
+
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleMouseEnter = (e) => {
-      const target = e.target;
-      if (
-        target.classList.contains("cursor-hover") ||
-        target.closest(".cursor-hover")
-      ) {
-        setIsHovering(true);
+    const handleMouseOver = (e) => {
+      // Check if the target or any of its parents has the cursor-hover class
+      let element = e.target;
+      while (element) {
+        if (element.classList && element.classList.contains("cursor-hover")) {
+          setIsHovering(true);
+          return;
+        }
+        element = element.parentElement;
       }
+      setIsHovering(false);
     };
 
-    const handleMouseLeave = (e) => {
-      const target = e.target;
-      if (
-        target.classList.contains("cursor-hover") ||
-        target.closest(".cursor-hover")
-      ) {
-        setIsHovering(false);
-      }
-    };
-
+    // Add event listeners
     window.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseenter", handleMouseEnter, true);
-    document.addEventListener("mouseleave", handleMouseLeave, true);
+    document.addEventListener("mouseover", handleMouseOver);
 
+    // Cleanup
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseenter", handleMouseEnter, true);
-      document.removeEventListener("mouseleave", handleMouseLeave, true);
+      document.removeEventListener("mouseover", handleMouseOver);
     };
   }, []);
 
   return (
     <>
+      {/* Main cursor ring */}
       <motion.div
         className="fixed w-8 h-8 border-2 border-cyan-400 rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
@@ -56,6 +53,8 @@ export const CursorFollow = () => {
           damping: 28,
         }}
       />
+
+      {/* Inner cursor dot */}
       <motion.div
         className="fixed w-2 h-2 bg-cyan-400 rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
