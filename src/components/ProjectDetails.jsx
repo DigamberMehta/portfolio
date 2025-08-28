@@ -41,7 +41,7 @@ export const ProjectDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left Side - Project Details - Scrollable */}
@@ -53,27 +53,27 @@ export const ProjectDetails = () => {
               className="space-y-8"
             >
               {/* Project Header */}
-              <div className="pt-4">
+              <div className="">
                 {/* Back Button */}
                 <div className="mb-6">
                   <Link
                     to="/"
-                    className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
+                    className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors px-4 rounded-lg hover:bg-gray-800/50 hover:scale-105 duration-300"
                   >
                     <ArrowLeft className="w-4 h-4" />
                     Back to Portfolio
                   </Link>
                 </div>
 
-                <div className="bg-gray-800/30 rounded-xl border border-gray-700/50 p-6 mb-6">
+                <div className="bg-[#0d0d0d] rounded-xl border border-[#1a1a1a] p-6 mb-6 shadow-2xl">
                   <div className="flex items-center gap-3 mb-4">
                     {project.featured && (
-                      <span className="px-3 py-1 bg-gradient-to-r from-cyan-400 to-purple-500 text-white text-xs font-bold rounded-full flex items-center gap-1">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white text-xs font-bold rounded-full flex items-center gap-1 shadow-lg">
                         <Star className="w-3 h-3" />
                         Featured
                       </span>
                     )}
-                    <span className="px-3 py-1 bg-gray-700 text-cyan-400 text-sm font-medium rounded-full border border-cyan-400/50">
+                    <span className="px-3 py-1 bg-[#1a1a1a] text-[#00d4ff] text-sm font-medium rounded-full border border-[#00d4ff]/50">
                       {project.category}
                     </span>
                   </div>
@@ -94,12 +94,12 @@ export const ProjectDetails = () => {
                   <Code className="w-5 h-5 text-cyan-400" />
                   Technologies Used
                 </h3>
-                <div className="bg-gray-800/30 rounded-xl border border-gray-700/50 p-6 backdrop-blur-sm">
+                <div className="bg-[#0d0d0d] rounded-xl border border-[#1a1a1a] p-6 shadow-xl">
                   <div className="flex flex-wrap gap-3">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-4 py-2 bg-gray-700/50 text-cyan-400 text-sm rounded-lg border border-gray-600 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300 hover:scale-105"
+                        className="px-4 py-2 bg-[#1a1a1a] text-[#00d4ff] text-sm rounded-lg border border-[#2a2a2a] hover:border-[#00d4ff] hover:bg-[#151515] transition-all duration-300 hover:scale-105 shadow-lg"
                       >
                         {tech}
                       </span>
@@ -115,14 +115,14 @@ export const ProjectDetails = () => {
                     <Zap className="w-5 h-5 text-yellow-400" />
                     Key Features
                   </h3>
-                  <div className="bg-gray-800/30 rounded-xl border border-gray-700/50 p-6 backdrop-blur-sm">
+                  <div className="bg-[#0d0d0d] rounded-xl border border-[#1a1a1a] p-6 shadow-xl">
                     <div className="grid gap-3">
                       {project.keyFeatures.map((feature, idx) => (
                         <div
                           key={idx}
-                          className="flex items-start gap-3 text-gray-300 hover:text-white transition-colors group"
+                          className="flex items-start gap-3 text-[#e0e0e0] hover:text-white transition-colors group"
                         >
-                          <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                          <div className="w-2 h-2 bg-[#f59e0b] rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                           <span className="group-hover:translate-x-1 transition-transform duration-300">
                             {feature}
                           </span>
@@ -140,14 +140,14 @@ export const ProjectDetails = () => {
                     <Lightbulb className="w-5 h-5 text-purple-400" />
                     Technical Highlights
                   </h3>
-                  <div className="bg-gray-800/30 rounded-xl border border-gray-700/50 p-6 backdrop-blur-sm">
+                  <div className="bg-[#0d0d0d] rounded-xl border border-[#1a1a1a] p-6 shadow-xl">
                     <div className="grid gap-3">
                       {project.technicalHighlights.map((highlight, idx) => (
                         <div
                           key={idx}
-                          className="flex items-start gap-3 text-gray-300 hover:text-white transition-colors group"
+                          className="flex items-start gap-3 text-[#e0e0e0] hover:text-white transition-colors group"
                         >
-                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                          <div className="w-2 h-2 bg-[#7c3aed] rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                           <span className="group-hover:translate-x-1 transition-transform duration-300">
                             {highlight}
                           </span>
@@ -165,14 +165,14 @@ export const ProjectDetails = () => {
                     <Shield className="w-5 h-5 text-blue-400" />
                     Challenges
                   </h3>
-                  <div className="bg-gray-800/30 rounded-xl border border-gray-700/50 p-6 backdrop-blur-sm">
+                  <div className="bg-[#0d0d0d] rounded-xl border border-[#1a1a1a] p-6 shadow-xl">
                     <div className="grid gap-3">
                       {project.challenges.map((challenge, idx) => (
                         <div
                           key={idx}
-                          className="flex items-start gap-3 text-gray-300 hover:text-white transition-colors group"
+                          className="flex items-start gap-3 text-[#e0e0e0] hover:text-white transition-colors group"
                         >
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                          <div className="w-2 h-2 bg-[#00d4ff] rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                           <span className="group-hover:translate-x-1 transition-transform duration-300">
                             {challenge}
                           </span>
@@ -190,14 +190,14 @@ export const ProjectDetails = () => {
                     <TrendingUp className="w-5 h-5 text-green-400" />
                     Impact & Results
                   </h3>
-                  <div className="bg-gray-800/30 rounded-xl border border-gray-700/50 p-6 backdrop-blur-sm">
+                  <div className="bg-[#0d0d0d] rounded-xl border border-[#1a1a1a] p-6 shadow-xl">
                     <div className="grid gap-3">
                       {project.impact.map((result, idx) => (
                         <div
                           key={idx}
-                          className="flex items-start gap-3 text-gray-300 hover:text-white transition-colors group"
+                          className="flex items-start gap-3 text-[#e0e0e0] hover:text-white transition-colors group"
                         >
-                          <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                          <div className="w-2 h-2 bg-[#10b981] rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                           <span className="group-hover:translate-x-1 transition-transform duration-300">
                             {result}
                           </span>
@@ -215,18 +215,18 @@ export const ProjectDetails = () => {
                     <Target className="w-5 h-5 text-blue-400" />
                     Architecture
                   </h3>
-                  <div className="bg-gray-800/30 rounded-xl border border-gray-700/50 p-6 backdrop-blur-sm">
+                  <div className="bg-[#0d0d0d] rounded-xl border border-[#1a1a1a] p-6 shadow-xl">
                     <div className="grid gap-4">
                       {Object.entries(project.architecture).map(
                         ([key, value]) => (
                           <div
                             key={key}
-                            className="border-l-2 border-cyan-400/50 pl-4 hover:border-cyan-400 transition-colors duration-300 group"
+                            className="border-l-2 border-[#00d4ff]/50 pl-4 hover:border-[#00d4ff] transition-colors duration-300 group"
                           >
-                            <h4 className="text-cyan-400 font-medium capitalize mb-2 group-hover:text-cyan-300 transition-colors">
+                            <h4 className="text-[#00d4ff] font-medium capitalize mb-2 group-hover:text-[#00d4ff]/80 transition-colors">
                               {key.replace(/_/g, " ")}
                             </h4>
-                            <p className="text-gray-300 text-sm leading-relaxed group-hover:text-gray-200 transition-colors">
+                            <p className="text-[#e0e0e0] text-sm leading-relaxed group-hover:text-white transition-colors">
                               {value}
                             </p>
                           </div>
@@ -318,37 +318,39 @@ export const ProjectDetails = () => {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 gap-4">
                 {project.keyFeatures && (
-                  <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 text-center">
-                    <div className="text-2xl font-bold text-cyan-400 mb-1">
+                  <div className="p-4 bg-[#0d0d0d] rounded-lg border border-[#1a1a1a] text-center shadow-xl">
+                    <div className="text-2xl font-bold text-[#f59e0b] mb-1">
                       {project.keyFeatures.length}
                     </div>
-                    <div className="text-gray-400 text-sm">Key Features</div>
+                    <div className="text-[#a0a0a0] text-sm">Key Features</div>
                   </div>
                 )}
 
                 {project.impact && (
-                  <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 text-center">
-                    <div className="text-2xl font-bold text-green-400 mb-1">
+                  <div className="p-4 bg-[#0d0d0d] rounded-lg border border-[#1a1a1a] text-center shadow-xl">
+                    <div className="text-2xl font-bold text-[#10b981] mb-1">
                       {project.impact.length}
                     </div>
-                    <div className="text-gray-400 text-sm">Impact Metrics</div>
+                    <div className="text-[#a0a0a0] text-sm">Impact Metrics</div>
                   </div>
                 )}
 
                 {project.technicalHighlights && (
-                  <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 text-center">
-                    <div className="text-2xl font-bold text-purple-400 mb-1">
+                  <div className="p-4 bg-[#0d0d0d] rounded-lg border border-[#1a1a1a] text-center shadow-xl">
+                    <div className="text-2xl font-bold text-[#7c3aed] mb-1">
                       {project.technicalHighlights.length}
                     </div>
-                    <div className="text-gray-400 text-sm">Tech Highlights</div>
+                    <div className="text-[#a0a0a0] text-sm">
+                      Tech Highlights
+                    </div>
                   </div>
                 )}
 
-                <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 text-center">
-                  <div className="text-2xl font-bold text-blue-400 mb-1">
+                <div className="p-4 bg-[#0d0d0d] rounded-lg border border-[#1a1a1a] text-center shadow-xl">
+                  <div className="text-2xl font-bold text-[#00d4ff] mb-1">
                     {project.technologies.length}
                   </div>
-                  <div className="text-gray-400 text-sm">Technologies</div>
+                  <div className="text-[#a0a0a0] text-sm">Technologies</div>
                 </div>
               </div>
 
@@ -358,7 +360,7 @@ export const ProjectDetails = () => {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                  className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#00d4ff]/25 transition-all duration-300 shadow-xl"
                 >
                   <Globe className="w-5 h-5" />
                   Visit Live Demo
@@ -369,7 +371,7 @@ export const ProjectDetails = () => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all duration-300"
+                  className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-[#0d0d0d] text-white font-semibold rounded-lg hover:bg-[#151515] border border-[#1a1a1a] transition-all duration-300 shadow-xl"
                 >
                   <Github className="w-5 h-5" />
                   View Source Code

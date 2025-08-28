@@ -54,7 +54,7 @@ export const Projects = () => {
   return (
     <section id="projects" ref={ref} className="py-20 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-blue-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black to-[#0a0a0a]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -104,10 +104,10 @@ export const Projects = () => {
               {/* Project card glow */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-              <div className="relative bg-gray-800/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl overflow-hidden cursor-hover hover:border-cyan-400/50 transition-all duration-300 shadow-2xl h-full flex flex-col">
+              <div className="relative bg-[#0d0d0d] backdrop-blur-xl border border-[#1a1a1a] rounded-2xl overflow-hidden cursor-hover hover:border-[#00d4ff]/50 transition-all duration-300 shadow-2xl h-full flex flex-col">
                 {/* Animated background pattern */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00d4ff]/5 to-[#7c3aed]/5 group-hover:from-[#00d4ff]/10 group-hover:to-[#7c3aed]/10 transition-all duration-300" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00d4ff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Project Image - Fixed height */}
                 <div className="relative overflow-hidden flex-shrink-0">
@@ -177,13 +177,13 @@ export const Projects = () => {
                       {project.technologies.slice(0, 6).map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-gray-700/50 text-cyan-400 text-sm rounded-full border border-gray-600 hover:border-cyan-400/50 transition-colors"
+                          className="px-3 py-1 bg-[#1a1a1a] text-[#00d4ff] text-sm rounded-full border border-[#2a2a2a] hover:border-[#00d4ff] transition-colors"
                         >
                           {tech}
                         </span>
                       ))}
                       {project.technologies.length > 6 && (
-                        <span className="px-3 py-1 bg-gray-700/50 text-gray-400 text-sm rounded-full border border-gray-600">
+                        <span className="px-3 py-1 bg-[#1a1a1a] text-[#a0a0a0] text-sm rounded-full border border-[#2a2a2a]">
                           +{project.technologies.length - 6} more
                         </span>
                       )}
@@ -211,7 +211,7 @@ export const Projects = () => {
                   </div>
 
                   {/* Action Buttons - Fixed at bottom */}
-                  <div className="flex gap-3 pt-4 border-t border-gray-700/50 mt-auto flex-shrink-0">
+                  <div className="flex gap-3 pt-4 border-t border-[#1a1a1a] mt-auto flex-shrink-0">
                     <button
                       onClick={(e) => {
                         console.log("=== VIEW DETAILS BUTTON CLICKED ===");
@@ -235,7 +235,7 @@ export const Projects = () => {
                           window.location.href = `/project/${project.id}`;
                         }
                       }}
-                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex-1 justify-center"
+                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#00d4ff]/25 transition-all duration-300 flex-1 justify-center shadow-xl"
                       style={{
                         pointerEvents: "auto",
                         zIndex: 10,
@@ -287,7 +287,7 @@ export const Projects = () => {
           className="text-center mt-12"
         >
           <motion.button
-            className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-gray-900 transition-all cursor-hover flex items-center gap-2 mx-auto"
+            className="px-8 py-4 border-2 border-[#00d4ff] text-[#00d4ff] font-semibold rounded-full hover:bg-[#00d4ff] hover:text-black transition-all cursor-hover flex items-center gap-2 mx-auto shadow-lg"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >

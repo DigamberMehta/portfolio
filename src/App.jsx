@@ -37,7 +37,7 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-gray-900 text-white min-h-screen relative overflow-x-hidden">
+      <div className="bg-black text-white min-h-screen relative overflow-x-hidden">
         {/* 3D Background with Error Boundary */}
         <ErrorBoundary>
           <ThreeBackground />

@@ -43,7 +43,7 @@ export const TechStack = () => {
   return (
     <section id="tech" className="py-20 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-purple-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black to-[#0a0a0a]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -54,15 +54,15 @@ export const TechStack = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] bg-clip-text text-transparent">
               Tech Stack
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-[#a0a0a0] text-lg max-w-2xl mx-auto">
             Cutting-edge technologies and tools I use to build exceptional
             digital experiences
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full mt-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] mx-auto rounded-full mt-6" />
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -81,15 +81,15 @@ export const TechStack = () => {
               }}
             >
               {/* Card glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#00d4ff]/20 to-[#7c3aed]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-              <div className="relative bg-gray-800/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 cursor-hover hover:border-cyan-400/50 transition-all duration-300 shadow-2xl">
+              <div className="relative bg-[#0d0d0d] backdrop-blur-xl border border-[#1a1a1a] rounded-2xl p-6 cursor-hover hover:border-[#00d4ff]/50 transition-all duration-300 shadow-2xl">
                 {/* Animated background pattern */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition-all duration-300 rounded-2xl" />
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00d4ff]/5 to-[#7c3aed]/5 group-hover:from-[#00d4ff]/10 group-hover:to-[#7c3aed]/10 transition-all duration-300 rounded-2xl" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00d4ff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl" />
 
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-[#00d4ff] transition-colors">
                     {category.category}
                   </h3>
 
@@ -99,14 +99,14 @@ export const TechStack = () => {
                       return (
                         <motion.div
                           key={tech.name}
-                          className="flex items-center gap-3 p-3 bg-gray-700/30 rounded-lg border border-gray-600/50 hover:border-cyan-400/50 transition-all duration-300 group/tech"
+                          className="flex items-center gap-3 p-3 bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] hover:border-[#00d4ff]/50 transition-all duration-300 group/tech shadow-lg"
                           initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ duration: 0.3, delay: techIndex * 0.1 }}
                           viewport={{ once: true }}
                           whileHover={{
                             scale: 1.05,
-                            backgroundColor: "rgba(6, 182, 212, 0.1)",
+                            backgroundColor: "rgba(0, 212, 255, 0.1)",
                           }}
                         >
                           <div
@@ -118,7 +118,7 @@ export const TechStack = () => {
                               style={{ color: tech.color }}
                             />
                           </div>
-                          <span className="text-sm text-gray-300 group-hover/tech:text-cyan-400 transition-colors font-medium">
+                          <span className="text-sm text-[#e0e0e0] group-hover/tech:text-[#00d4ff] transition-colors font-medium">
                             {tech.name}
                           </span>
                         </motion.div>
@@ -142,12 +142,12 @@ export const TechStack = () => {
           <h3 className="text-2xl font-bold text-white mb-4">
             Ready to work with cutting-edge tech?
           </h3>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-[#a0a0a0] mb-8 max-w-2xl mx-auto">
             Let's build something amazing together using the latest technologies
             and best practices
           </p>
           <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all cursor-hover flex items-center gap-2 mx-auto"
+            className="px-8 py-4 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white font-semibold rounded-full hover:shadow-lg hover:shadow-[#00d4ff]/25 transition-all cursor-hover flex items-center gap-2 mx-auto shadow-xl"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >

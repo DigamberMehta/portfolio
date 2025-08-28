@@ -200,18 +200,26 @@ export const About = () => {
 
             <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
               <p>
-                I'm a passionate full-stack developer with {personalInfo.experience} of experience building scalable web applications and exploring
-                cutting-edge AI technologies. My journey began with a curiosity
-                about how things work, which led me to dive deep into the world
-                of software development and artificial intelligence.
+                I'm a passionate full-stack developer with{" "}
+                {personalInfo.experience} of experience building scalable web
+                applications and exploring cutting-edge AI technologies. My
+                journey began with a curiosity about how things work, which led
+                me to dive deep into the world of software development and
+                artificial intelligence.
               </p>
 
               <p>
-                I specialize in building AI-powered SaaS platforms and automation solutions, with expertise in integrating multiple AI models (OpenAI, Google Gemini, DeepSeek) into real-world applications. My flagship project, AutoBidder, demonstrates my ability to create intelligent automation workflows that solve complex business challenges.
+                I specialize in building AI-powered SaaS platforms and
+                automation solutions, with expertise in integrating multiple AI
+                models (OpenAI, Google Gemini, DeepSeek) into real-world
+                applications. My flagship project, AutoBidder, demonstrates my
+                ability to create intelligent automation workflows that solve
+                complex business challenges.
               </p>
 
               <p>
-                When I'm not coding, you'll find me experimenting with AI/ML models, contributing to open-source projects, or sharing
+                When I'm not coding, you'll find me experimenting with AI/ML
+                models, contributing to open-source projects, or sharing
                 knowledge with the developer community. I believe in writing
                 clean, maintainable code and creating user experiences that
                 truly matter.
@@ -448,28 +456,28 @@ export const About = () => {
                 level: 95,
                 icon: Code,
                 color: "from-blue-400 to-cyan-500",
-                description: "React, Vite, Tailwind CSS, Framer Motion"
+                description: "React, Vite, Tailwind CSS, Framer Motion",
               },
               {
                 skill: "Backend Development",
                 level: 90,
                 icon: Zap,
                 color: "from-green-400 to-emerald-500",
-                description: "Node.js, Express.js, MongoDB, Mongoose"
+                description: "Node.js, Express.js, MongoDB, Mongoose",
               },
               {
                 skill: "AI/ML Integration",
                 level: 88,
                 icon: Brain,
                 color: "from-purple-400 to-pink-500",
-                description: "OpenAI, Gemini, DeepSeek, AI Automation"
+                description: "OpenAI, Gemini, DeepSeek, AI Automation",
               },
               {
                 skill: "SaaS & Automation",
                 level: 92,
                 icon: Rocket,
                 color: "from-orange-400 to-red-500",
-                description: "Payment APIs, Webhooks, Cron Jobs"
+                description: "Payment APIs, Webhooks, Cron Jobs",
               },
             ].map((item, index) => (
               <motion.div
@@ -517,7 +525,9 @@ export const About = () => {
                     </div>
 
                     {/* Skill description */}
-                    <p className="text-gray-400 text-sm mb-4">{item.description}</p>
+                    <p className="text-gray-400 text-sm mb-4">
+                      {item.description}
+                    </p>
 
                     {/* Enhanced progress bar */}
                     <div className="relative h-3 bg-gray-800/50 rounded-full overflow-hidden">
@@ -549,7 +559,7 @@ export const About = () => {
 
                         {/* Progress indicator dot */}
                         <motion.div
-                          className="absolute right-0 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-lg"
+                          className="absolute right-0 transform -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg"
                           animate={{
                             scale: [1, 1.2, 1],
                             boxShadow: [

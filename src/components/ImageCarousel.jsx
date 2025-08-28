@@ -66,7 +66,7 @@ export const ImageCarousel = ({ images, projectTitle }) => {
       <div className="relative group">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-        <div className="relative bg-gray-800/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl overflow-hidden">
+        <div className="relative bg-[#0d0d0d] backdrop-blur-xl border border-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl">
           {/* Main Image */}
           <div className="relative">
             <img
@@ -131,7 +131,7 @@ export const ImageCarousel = ({ images, projectTitle }) => {
 
           {/* Thumbnail Navigation */}
           {images.length > 1 && (
-            <div className="p-4 bg-gray-900/50">
+            <div className="p-4 bg-[#111111]">
               <div className="flex gap-2 overflow-x-auto scrollbar-hide">
                 {images.map((image, index) => (
                   <button
@@ -139,8 +139,8 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                     onClick={() => goToImage(index)}
                     className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
                       index === currentIndex
-                        ? "border-cyan-400 scale-110"
-                        : "border-gray-600 hover:border-gray-400"
+                        ? "border-[#00d4ff] scale-110"
+                        : "border-[#2a2a2a] hover:border-[#3a3a3a]"
                     }`}
                   >
                     <img
