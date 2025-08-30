@@ -53,12 +53,12 @@ export const ProjectDetails = () => {
               className="space-y-8"
             >
               {/* Project Header */}
-              <div className="">
+              <div className="pt-4">
                 {/* Back Button */}
                 <div className="mb-6">
                   <Link
                     to="/"
-                    className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors px-4 rounded-lg hover:bg-gray-800/50 hover:scale-105 duration-300"
+                    className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
                   >
                     <ArrowLeft className="w-4 h-4" />
                     Back to Portfolio
@@ -295,16 +295,23 @@ export const ProjectDetails = () => {
 
               {/* Quick Action Buttons */}
               <div className="flex gap-3">
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-cyan-500 text-white rounded-lg font-medium hover:bg-cyan-600 transition-colors flex-1 justify-center"
-                >
-                  <Play className="w-4 h-4" />
-                  Live Demo
-                </a>
-                <a
+                {project.liveUrl ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-cyan-500 text-white rounded-lg font-medium hover:bg-cyan-600 transition-colors flex-1 justify-center"
+                  >
+                    <Play className="w-4 h-4" />
+                    Live Demo
+                  </a>
+                ) : (
+                  <div className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg font-medium flex-1 justify-center cursor-default">
+                    <MessageCircle className="w-4 h-4" />
+                    Contact for Demo
+                  </div>
+                )}
+                {/* <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -312,7 +319,7 @@ export const ProjectDetails = () => {
                 >
                   <Code className="w-4 h-4" />
                   Source Code
-                </a>
+                </a> */}
               </div>
 
               {/* Quick Stats */}
@@ -356,18 +363,25 @@ export const ProjectDetails = () => {
 
               {/* Project Links */}
               <div className="space-y-3">
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#00d4ff]/25 transition-all duration-300 shadow-xl"
-                >
-                  <Globe className="w-5 h-5" />
-                  Visit Live Demo
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                {project.liveUrl ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#00d4ff]/25 transition-all duration-300 shadow-xl"
+                  >
+                    <Globe className="w-5 h-5" />
+                    Visit Live Demo
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                ) : (
+                  <div className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gray-600 text-white font-semibold rounded-lg cursor-default shadow-xl">
+                    <MessageCircle className="w-5 h-5" />
+                    Contact me for Demo
+                  </div>
+                )}
 
-                <a
+                {/* <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -376,7 +390,7 @@ export const ProjectDetails = () => {
                   <Github className="w-5 h-5" />
                   View Source Code
                   <ExternalLink className="w-4 h-4" />
-                </a>
+                </a> */}
               </div>
             </motion.div>
           </div>

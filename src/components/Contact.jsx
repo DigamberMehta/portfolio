@@ -78,22 +78,7 @@ export const Contact = () => {
                 </div>
               </motion.div>
 
-              <motion.div
-                className="flex items-center gap-4 p-4 bg-[#0d0d0d] backdrop-blur-sm rounded-lg border border-[#1a1a1a] hover:border-[#7c3aed]/50 transition-all duration-300 shadow-xl"
-                whileHover={{ scale: 1.02, x: 5 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-12 h-12 bg-[#7c3aed]/20 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-[#7c3aed]" />
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">Location</h4>
-                  <p className="text-[#a0a0a0]">{personalInfo.location}</p>
-                </div>
-              </motion.div>
+
 
               <motion.div
                 className="flex items-center gap-4 p-4 bg-[#0d0d0d] backdrop-blur-sm rounded-lg border border-[#1a1a1a] hover:border-[#10b981]/50 transition-all duration-300 shadow-xl"
@@ -109,7 +94,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="text-white font-semibold">Experience</h4>
                   <p className="text-[#a0a0a0]">
-                    {personalInfo.experience} in the industry
+                    {personalInfo.experience}
                   </p>
                 </div>
               </motion.div>

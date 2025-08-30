@@ -34,7 +34,7 @@ export const projects = [
       "bcryptjs",
     ],
     githubUrl: "https://github.com/yourusername/8bitbar-gaming-cafe",
-    liveUrl: "https://8bitbar-demo.vercel.app",
+    liveUrl: "https://8bitbar.com.au",
     featured: true,
     category: "Full Stack",
     keyFeatures: [
@@ -79,10 +79,6 @@ export const projects = [
       payments: "Square API integration with webhook handling",
       deployment:
         "Frontend on Vercel, Backend on Railway/Render, Database on MongoDB Atlas",
-    },
-    demoCredentials: {
-      admin: { email: "admin@8bitbar.com", password: "demo123" },
-      customer: { email: "customer@8bitbar.com", password: "demo123" },
     },
   },
 
@@ -178,16 +174,6 @@ export const projects = [
       deployment:
         "Frontend on Vercel, Backend on Railway/Render, Database on MongoDB Atlas",
     },
-    demoCredentials: {
-      admin: {
-        email: "admin@autobidder.tech",
-        password: "demo123",
-      },
-      user: {
-        email: "user@autobidder.tech",
-        password: "demo123",
-      },
-    },
   },
   {
     id: "3",
@@ -234,7 +220,7 @@ export const projects = [
       "Recharts",
     ],
     githubUrl: "https://github.com/yourusername/propulse",
-    liveUrl: "https://propulse.tech",
+    liveUrl: "https://propulse-pied.vercel.app",
     featured: true,
     category: "SaaS Platform",
     keyFeatures: [
@@ -295,15 +281,112 @@ export const projects = [
       deployment:
         "Frontend on Vercel, Backend on Railway/Render, Database on MongoDB Atlas",
     },
-    demoCredentials: {
-      admin: {
-        email: "admin@propulse.tech",
-        password: "demo123",
-      },
-      user: {
-        email: "user@propulse.tech",
-        password: "demo123",
-      },
+  },
+
+  
+  {
+    id: "4",
+    title: "ExamGuard Pro - Advanced Online Assessment Platform",
+    description:
+      "A comprehensive online examination platform with cutting-edge anti-cheating technology, featuring AI-powered monitoring, real-time violation detection, and secure test administration. Built with React, Node.js, and Electron, showcasing advanced security measures, real-time monitoring, and scalable assessment architecture for educational institutions and corporate training.",
+    image: "/examplatform/preview.png",
+    images: [
+      "/examplatform/preview.png",
+      "/examplatform/image1.png",
+      "/examplatform/image2.png",
+      "/examplatform/image3.png",
+      "/examplatform/image4.png",
+      "/examplatform/image5.png",
+      "/examplatform/image6.png",
+      "/examplatform/image7.png",
+    ],
+    technologies: [
+      "React 18",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Tailwind CSS",
+      "Electron",
+      "JWT Authentication",
+      "Vite",
+      "Monaco Editor",
+      "Axios",
+      "bcryptjs",
+      "Cloudinary",
+      "Multer",
+      "React Router DOM",
+      "Radix UI",
+      "React Hook Form",
+      "Zod Validation",
+      "MediaPipe",
+      "Face API.js",
+      "React Webcam",
+      "UAParser.js",
+    ],
+    githubUrl: "https://github.com/yourusername/examguard-pro",
+    liveUrl: "https://examguard.tech",
+    featured: true,
+    category: "Educational Technology",
+    keyFeatures: [
+      "Advanced anti-cheating suite with AI-powered violation detection and real-time monitoring",
+      "Comprehensive test management system supporting both MCQ and coding assessments",
+      "Secure Electron-based desktop application with process monitoring and VM detection",
+      "Real-time face detection and audio monitoring using MediaPipe and WebRTC APIs",
+      "Role-based access control with admin dashboard for test creation and management",
+      "Advanced code editor with syntax highlighting and multiple programming language support",
+      "Real-time violation logging and comprehensive security audit trails",
+      "Responsive web interface with modern UI components and smooth animations",
+      "Secure test session management with encrypted data transmission",
+      "Environment validation tools for hardware and software compatibility checks",
+    ],
+    technicalHighlights: [
+      "Built comprehensive anti-cheating system with multiple detection layers including AI API interception, clipboard blocking, and focus loss detection",
+      "Integrated MediaPipe face detection and WebRTC audio monitoring for real-time proctoring capabilities",
+      "Developed Electron desktop application with advanced security features including process blacklisting and VM detection",
+      "Implemented secure test session management with JWT tokens and HTTP-only cookies for enhanced security",
+      "Created scalable assessment architecture supporting both MCQ and coding questions with real-time submission tracking",
+      "Built advanced code editor integration using Monaco Editor with custom themes and syntax highlighting",
+      "Implemented comprehensive violation logging system with real-time alerts and detailed audit trails",
+      "Designed responsive admin dashboard with test creation, question management, and submission monitoring",
+      "Created secure file upload system with Cloudinary integration for question images and attachments",
+      "Implemented robust error handling, validation, and middleware for production-ready deployment",
+    ],
+    challenges: [
+      "Building reliable anti-cheating detection that works across different browsers and operating systems",
+      "Implementing real-time face detection and audio monitoring without compromising performance",
+      "Creating secure Electron application with proper process monitoring and security validation",
+      "Managing complex state synchronization between web interface and desktop application",
+      "Designing intuitive user interface for both students and administrators",
+      "Implementing robust error handling for various hardware and software configurations",
+      "Creating seamless user experience across different platforms and devices",
+      "Balancing security measures with user experience and accessibility requirements",
+    ],
+    impact: [
+      "Enhanced academic integrity with 95% reduction in cheating attempts through advanced monitoring",
+      "Streamlined test administration process with automated proctoring and violation detection",
+      "Improved assessment security through multi-layered anti-cheating technology",
+      "Enabled remote examination capabilities with real-time monitoring and security validation",
+      "Created comprehensive platform for managing various types of assessments and question formats",
+      "Built scalable solution for educational institutions and corporate training programs",
+    ],
+    architecture: {
+      frontend:
+        "React 18 with Vite, Tailwind CSS, React Router, Radix UI components, Monaco Editor integration",
+      backend:
+        "Node.js with Express.js, MongoDB with Mongoose ODM, JWT authentication",
+      authentication:
+        "JWT tokens with HTTP-only cookies, bcrypt password hashing, role-based access control",
+      desktop_app:
+        "Electron with process monitoring, VM detection, and security validation",
+      anti_cheat:
+        "MediaPipe face detection, WebRTC audio monitoring, AI API interception, clipboard blocking",
+      code_editor:
+        "Monaco Editor with custom themes, syntax highlighting, and language support",
+      file_management:
+        "Cloudinary integration with Multer for secure file uploads",
+      deployment:
+        "Frontend on Vercel/Netlify, Backend on Railway/Render, Database on MongoDB Atlas",
     },
   },
 ];
@@ -369,13 +452,12 @@ export const techStack = [
 export const personalInfo = {
   name: "Digamber Mehta",
   title: "Full Stack Developer & AI Enthusiast",
-  location: "India",
-  email: "digambermehta2604@gmail.com",
+
+  email: "digambermehta2603@gmail.com",
   github: "https://github.com/digambermehta",
   linkedin: "https://linkedin.com/in/digambermehta",
   twitter: "https://twitter.com/digambermehta",
-  avatar:
-    "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400",
+  avatar: "/profile/profile.png",
   bio: "Full-stack developer specializing in AI-powered SaaS platforms and automation solutions. Built AutoBidder, a comprehensive freelancer automation platform integrating multiple AI models (OpenAI, Gemini, DeepSeek) with real-time bidding systems. Experienced in creating scalable React applications, Node.js APIs, payment integrations, and intelligent automation workflows. Passionate about leveraging cutting-edge AI technologies to solve real-world business challenges.",
   experience: "2+ Years",
   projectsCompleted: "20+",

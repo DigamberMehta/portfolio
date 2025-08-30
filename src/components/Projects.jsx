@@ -120,18 +120,27 @@ export const Projects = () => {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-4 left-4 right-4 flex gap-3">
-                      <motion.a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-2 px-4 py-2 bg-cyan-500 text-white rounded-lg font-medium cursor-hover"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <Play className="w-4 h-4" />
-                        Live Demo
-                      </motion.a>
+                      {project.liveUrl ? (
+                        <motion.a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="flex items-center gap-2 px-4 py-2 bg-cyan-500 text-white rounded-lg font-medium cursor-hover"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Play className="w-4 h-4" />
+                          Live Demo
+                        </motion.a>
+                      ) : (
+                        <motion.div
+                          className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg font-medium cursor-default"
+                        >
+                          <MessageCircle className="w-4 h-4" />
+                          Contact for Demo
+                        </motion.div>
+                      )}
                       <motion.a
                         href={project.githubUrl}
                         target="_blank"
@@ -252,16 +261,25 @@ export const Projects = () => {
                       View Details
                     </button>
 
-                    <motion.a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 py-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-hover"
-                      whileHover={{ x: 4 }}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Globe className="w-4 h-4" />
-                    </motion.a>
+                    {project.liveUrl ? (
+                      <motion.a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-3 py-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-hover"
+                        whileHover={{ x: 4 }}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Globe className="w-4 h-4" />
+                      </motion.a>
+                    ) : (
+                      <motion.div
+                        className="flex items-center gap-2 px-3 py-2 text-gray-500 cursor-default"
+                        title="Contact me for demo"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                      </motion.div>
+                    )}
                     <motion.a
                       href={project.githubUrl}
                       target="_blank"
@@ -279,8 +297,8 @@ export const Projects = () => {
           ))}
         </div>
 
-        {/* View More Button */}
-        <motion.div
+        {/* View More Button - Hidden */}
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1 }}
@@ -295,7 +313,7 @@ export const Projects = () => {
             View All Projects
             <ArrowRight className="w-5 h-5" />
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
