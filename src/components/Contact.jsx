@@ -33,8 +33,9 @@ export const Contact = () => {
             </span>
           </h2>
           <p className="text-[#a0a0a0] text-lg max-w-2xl mx-auto">
-            Ready to start your next project? Let's discuss how I can help bring
-            your ideas to life.
+            Have a project in mind? I'd love to hear about it. Whether you need a 
+            complete solution or just want to explore possibilities, let's start 
+            the conversation that could change everything.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] mx-auto rounded-full mt-6" />
         </motion.div>
@@ -100,8 +101,8 @@ export const Contact = () => {
               </motion.div>
             </div>
 
-            {/* Social Links */}
-            <div>
+            {/* Social Links - Hidden */}
+            {/* <div>
               <h4 className="text-white font-semibold mb-4">Follow Me</h4>
               <div className="flex gap-4">
                 {[
@@ -134,7 +135,7 @@ export const Contact = () => {
                   </motion.a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Contact Form */}

@@ -200,35 +200,32 @@ export const About = () => {
 
             <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
               <p>
-                I'm a passionate full-stack developer with{" "}
-                {personalInfo.experience} of experience building scalable web
-                applications and exploring cutting-edge AI technologies. My
-                journey began with a curiosity about how things work, which led
-                me to dive deep into the world of software development and
-                artificial intelligence.
+                Hello! I'm Jason, a full-stack developer with {personalInfo.experience} of experience 
+                crafting digital solutions that make a real difference. My journey started with 
+                a simple question: "How can technology solve everyday problems?" This curiosity 
+                led me to master both frontend and backend development, along with the exciting 
+                world of AI integration.
               </p>
 
               <p>
-                I specialize in building AI-powered SaaS platforms and
-                automation solutions, with expertise in integrating multiple AI
-                models (OpenAI, Google Gemini, DeepSeek) into real-world
-                applications. My flagship project, AutoBidder, demonstrates my
-                ability to create intelligent automation workflows that solve
-                complex business challenges.
+                What drives me is the challenge of turning complex ideas into elegant, 
+                user-friendly applications. I love the moment when everything clicks together 
+                – when the code flows smoothly, the user interface feels intuitive, and the 
+                AI components work seamlessly behind the scenes.
               </p>
 
               <p>
-                When I'm not coding, you'll find me experimenting with AI/ML
-                models, contributing to open-source projects, or sharing
-                knowledge with the developer community. I believe in writing
-                clean, maintainable code and creating user experiences that
-                truly matter.
+                Beyond coding, I'm passionate about continuous learning and sharing knowledge. 
+                Whether it's exploring new AI models, contributing to open-source projects, 
+                or mentoring fellow developers, I believe in growing together as a community. 
+                Clean code and meaningful user experiences aren't just goals – they're principles 
+                I live by.
               </p>
 
               <p>
-                Currently focused on building AI-powered applications and
-                exploring the intersection of web technologies with machine
-                learning to create intelligent, responsive user experiences.
+                Right now, I'm focused on pushing the boundaries of what's possible with 
+                AI-powered web applications. The future is intelligent, and I'm excited to 
+                be part of building it, one line of code at a time.
               </p>
             </div>
 

@@ -6,6 +6,7 @@ import { CursorFollow } from "./components/CursorFollow.jsx";
 import { Navigation } from "./components/Navigation.jsx";
 import { Hero } from "./components/Hero.jsx";
 import { About } from "./components/About.jsx";
+import { WhatIOffer } from "./components/WhatIOffer.jsx";
 import { Projects } from "./components/Projects.jsx";
 import { TechStack } from "./components/TechStack.jsx";
 import { Contact } from "./components/Contact.jsx";
@@ -63,6 +64,7 @@ function App() {
                 <>
                   <Hero />
                   <About />
+                  <WhatIOffer />
                   <Projects />
                   <TechStack />
                   <Contact />

@@ -72,11 +72,11 @@ export const ImageCarousel = ({ images, projectTitle }) => {
             <img
               src={images[currentIndex]}
               alt={`${projectTitle} - Image ${currentIndex + 1}`}
-              className="w-full h-96 object-cover cursor-pointer group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-64 sm:h-80 md:h-96 object-cover cursor-pointer group-hover:scale-105 transition-transform duration-700"
               onClick={openFullscreen}
             />
 
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows - Mobile Optimized */}
             {images.length > 1 && (
               <>
                 <button
@@ -84,24 +84,26 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                     e.stopPropagation();
                     prevImage();
                   }}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 touch-manipulation"
+                  aria-label="Previous image"
                 >
-                  <ChevronLeft className="w-5 h-5" />
+                  <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     nextImage();
                   }}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 touch-manipulation"
+                  aria-label="Next image"
                 >
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
               </>
             )}
 
             {/* Image Counter */}
-            <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+            <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-black/70 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-medium">
               {currentIndex + 1} / {images.length}
             </div>
 
@@ -111,10 +113,11 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                 e.stopPropagation();
                 openFullscreen();
               }}
-              className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+              className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 touch-manipulation"
+              aria-label="Open fullscreen"
             >
               <svg
-                className="w-5 h-5"
+                className="w-4 h-4 sm:w-5 sm:h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -129,19 +132,20 @@ export const ImageCarousel = ({ images, projectTitle }) => {
             </button>
           </div>
 
-          {/* Thumbnail Navigation */}
+          {/* Thumbnail Navigation - Mobile Optimized */}
           {images.length > 1 && (
-            <div className="p-4 bg-[#111111]">
-              <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+            <div className="p-3 sm:p-4 bg-[#111111]">
+              <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
                 {images.map((image, index) => (
                   <button
                     key={index}
                     onClick={() => goToImage(index)}
-                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
+                    className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 touch-manipulation ${
                       index === currentIndex
                         ? "border-[#00d4ff] scale-110"
                         : "border-[#2a2a2a] hover:border-[#3a3a3a]"
                     }`}
+                    aria-label={`Go to image ${index + 1}`}
                   >
                     <img
                       src={image}
@@ -156,7 +160,7 @@ export const ImageCarousel = ({ images, projectTitle }) => {
         </div>
       </div>
 
-      {/* Fullscreen Modal */}
+      {/* Fullscreen Modal - Mobile Optimized */}
       <AnimatePresence>
         {isFullscreen && (
           <motion.div
@@ -166,17 +170,18 @@ export const ImageCarousel = ({ images, projectTitle }) => {
             className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center"
             onClick={closeFullscreen}
           >
-            {/* Close Button */}
+            {/* Close Button - Mobile Optimized */}
             <button
               onClick={closeFullscreen}
-              className="absolute top-6 right-6 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full z-10 hover:scale-110 transition-all duration-300"
+              className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full z-10 hover:scale-110 transition-all duration-300 touch-manipulation"
+              aria-label="Close fullscreen"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
 
-            {/* Fullscreen Image */}
+            {/* Fullscreen Image - Mobile Optimized */}
             <div
-              className="relative max-w-7xl max-h-full p-8"
+              className="relative w-full h-full max-w-7xl max-h-full p-4 sm:p-8 flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
               <AnimatePresence mode="wait">
@@ -192,34 +197,37 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                 />
               </AnimatePresence>
 
-              {/* Fullscreen Navigation */}
+              {/* Fullscreen Navigation - Mobile Optimized */}
               {images.length > 1 && (
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-8 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-4 rounded-full hover:scale-110 transition-all duration-300"
+                    className="absolute left-2 sm:left-8 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 sm:p-4 rounded-full hover:scale-110 transition-all duration-300 touch-manipulation"
+                    aria-label="Previous image"
                   >
-                    <ChevronLeft className="w-8 h-8" />
+                    <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-8 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-4 rounded-full hover:scale-110 transition-all duration-300"
+                    className="absolute right-2 sm:right-8 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 sm:p-4 rounded-full hover:scale-110 transition-all duration-300 touch-manipulation"
+                    aria-label="Next image"
                   >
-                    <ChevronRight className="w-8 h-8" />
+                    <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
                   </button>
 
-                  {/* Fullscreen Thumbnails */}
-                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-                    <div className="flex gap-3 bg-black/50 p-3 rounded-full">
+                  {/* Fullscreen Thumbnails - Mobile Optimized */}
+                  <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2">
+                    <div className="flex gap-2 sm:gap-3 bg-black/70 p-2 sm:p-3 rounded-full max-w-full overflow-x-auto">
                       {images.map((image, index) => (
                         <button
                           key={index}
                           onClick={() => goToImage(index)}
-                          className={`w-12 h-12 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
+                          className={`w-8 h-8 sm:w-12 sm:h-12 rounded-lg overflow-hidden border-2 transition-all duration-300 flex-shrink-0 touch-manipulation ${
                             index === currentIndex
                               ? "border-cyan-400 scale-110"
                               : "border-gray-600 hover:border-gray-400"
                           }`}
+                          aria-label={`Go to image ${index + 1}`}
                         >
                           <img
                             src={image}

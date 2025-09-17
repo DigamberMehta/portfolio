@@ -121,7 +121,9 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          {personalInfo.bio}
+          Transforming complex ideas into elegant digital solutions. I specialize in building 
+          intelligent applications that not only meet requirements but exceed expectations. 
+          Let's create something extraordinary together.
         </motion.p>
 
         {/* 3D Stats Cards */}
@@ -206,9 +208,9 @@ export const Hero = () => {
           </motion.button>
         </motion.div>
 
-        {/* Social Links with 3D Effect */}
-        <motion.div
-          className="flex justify-center gap-6 mt-12"
+        {/* Social Links with 3D Effect - Hidden */}
+        {/* <motion.div
+          className="flex justify-center gap-6 my-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.4 }}
@@ -237,7 +239,7 @@ export const Hero = () => {
               <social.icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
             </motion.a>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Scroll Indicator */}

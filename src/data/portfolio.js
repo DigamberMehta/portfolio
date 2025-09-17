@@ -3,7 +3,7 @@ export const projects = [
     id: "1",
     title: "8bitbar Gaming Cafe Management System",
     description:
-      "A comprehensive full-stack booking management platform designed for a modern gaming cafe. Features real-time seat booking with interactive visual layout editor, multi-service reservations (cafe seating, karaoke rooms, N64 gaming booths), integrated payment processing, and a powerful admin dashboard. Built with React and Node.js, showcasing advanced state management, payment integration, and responsive design principles.",
+      "Revolutionizing the gaming cafe experience with an intelligent booking system that makes reservations effortless. This platform combines real-time seat management, interactive floor plans, and seamless payment processing to create a smooth experience for both customers and staff. From karaoke rooms to gaming booths, every aspect is designed for maximum efficiency and user satisfaction.",
     image: "/8bitbar/preview.png",
     images: [
       "/8bitbar/preview.png",
@@ -86,7 +86,7 @@ export const projects = [
     id: "2",
     title: "AutoBidder - Freelancer.com Automation Platform",
     description:
-      "A comprehensive SaaS platform that automates the bidding process on Freelancer.com using advanced AI technology. Features intelligent project matching, automated proposal generation, real-time analytics, and subscription-based bid management. Built with React and Node.js, showcasing AI integration, payment processing, and scalable SaaS architecture.",
+      "Transforming how freelancers work with an AI-powered automation platform that handles the tedious parts of bidding. This intelligent system analyzes projects, generates personalized proposals, and manages submissions automatically. It's like having a personal assistant that never sleeps, helping freelancers focus on what they do best while the AI handles the rest.",
     image: "/autobidder/preview.png",
     images: [
       "/autobidder/preview.png",
@@ -179,7 +179,7 @@ export const projects = [
     id: "3",
     title: "ProPulse - AI-Powered Job Proposal Generator",
     description:
-      "A comprehensive SaaS platform that revolutionizes job proposal creation using advanced AI technology. Features intelligent proposal generation, browser extension integration for Upwork, profile management, subscription-based pricing, and real-time analytics. Built with React, Node.js, and Chrome extension technology, showcasing AI integration, payment processing, and scalable SaaS architecture.",
+      "The ultimate tool for freelancers who want to win more projects with less effort. This platform combines AI-powered proposal writing with seamless browser integration, making it incredibly easy to create compelling proposals that stand out. Whether you're a seasoned freelancer or just starting out, this tool helps you present your best self to potential clients.",
     image: "/ProPulse/preview.png",
     images: [
       "/ProPulse/preview.png",
@@ -288,7 +288,7 @@ export const projects = [
     id: "4",
     title: "ExamGuard Pro - Advanced Online Assessment Platform",
     description:
-      "A comprehensive online examination platform with cutting-edge anti-cheating technology, featuring AI-powered monitoring, real-time violation detection, and secure test administration. Built with React, Node.js, and Electron, showcasing advanced security measures, real-time monitoring, and scalable assessment architecture for educational institutions and corporate training.",
+      "Ensuring academic integrity in the digital age with an advanced online examination platform that combines AI monitoring, real-time proctoring, and comprehensive security measures. This solution makes remote testing as secure as in-person exams, giving educators confidence while providing students with a fair, accessible testing environment.",
     image: "/examplatform/preview.png",
     images: [
       "/examplatform/preview.png",
@@ -324,8 +324,8 @@ export const projects = [
       "React Webcam",
       "UAParser.js",
     ],
-    githubUrl: "https://github.com/yourusername/examguard-pro",
-    liveUrl: "https://examguard.tech",
+    githubUrl: "",
+    liveUrl: "",
     featured: true,
     category: "Educational Technology",
     keyFeatures: [
@@ -389,6 +389,97 @@ export const projects = [
         "Frontend on Vercel/Netlify, Backend on Railway/Render, Database on MongoDB Atlas",
     },
   },
+  
+  {
+    "id": "5",
+    "title": "RestaurantHub - Complete Food Ordering Platform",
+    "description": "Bringing restaurants into the digital age with a complete e-commerce solution that makes online ordering effortless. This platform handles everything from menu management to secure payments, creating a seamless experience for both customers and restaurant staff. It's designed to help restaurants grow their business while providing customers with an intuitive ordering experience.",
+    "image": "/RestaurantHub/preview.jpeg",
+    "images": [
+      "/RestaurantHub/preview.jpeg",
+      "/RestaurantHub/image1.jpeg",
+      "/RestaurantHub/image2.jpeg",
+      "/RestaurantHub/image3.jpeg",
+      "/RestaurantHub/image4.jpeg",
+      "/RestaurantHub/image5.jpeg",
+      "/RestaurantHub/image6.jpeg"
+    ],
+    "technologies": [
+      "React 18",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "React Router DOM",
+      "Stripe API",
+      "React Icons",
+      "React Hot Toast",
+      "FileReader API",
+      "CORS",
+      "dotenv",
+      "Vercel",
+      "Render"
+    ],
+    "githubUrl": "",
+    "liveUrl": "",
+    "featured": true,
+    "category": "E-Commerce & Food Technology",
+    "keyFeatures": [
+      "Complete restaurant e-commerce platform with product catalog and ordering system",
+      "Admin-only product management with image upload and category-based organization",
+      "User authentication system with profile picture upload and secure login/signup",
+      "Advanced shopping cart with quantity management and real-time price calculation",
+      "Secure payment processing integration with Stripe payment gateway",
+      "Product filtering and categorization system for easy food discovery",
+      "Responsive design optimized for both desktop and mobile devices",
+      "State management using Redux Toolkit for efficient data handling",
+      "Real-time toast notifications for user feedback and error handling",
+      "Role-based access control with admin dashboard for product management"
+    ],
+    "technicalHighlights": [
+      "Built complete MERN stack application with React 18 frontend and Node.js/Express backend",
+      "Implemented MongoDB database with Mongoose ODM for efficient data modeling and management",
+      "Developed responsive UI using Tailwind CSS with mobile-first design approach",
+      "Integrated Redux Toolkit for centralized state management and predictable data flow",
+      "Created secure authentication system with user profile management and image upload",
+      "Implemented Stripe payment gateway for secure online transactions and checkout process",
+      "Built admin product management system with image-to-base64 conversion and category filtering",
+      "Developed advanced shopping cart functionality with quantity controls and price calculations",
+      "Implemented React Router for seamless navigation and single-page application experience",
+      "Created comprehensive error handling with custom 404 pages and user-friendly notifications"
+    ],
+    "challenges": [
+      "Implementing secure image upload and base64 conversion for product management",
+      "Creating responsive design that works seamlessly across all device sizes",
+      "Managing complex state synchronization between cart, user authentication, and product data",
+      "Integrating Stripe payment gateway with proper error handling and security measures",
+      "Building admin-only features with proper access control and role management",
+      "Optimizing performance with large product catalogs and image handling",
+      "Creating intuitive user experience for both customers and administrators",
+      "Implementing proper error handling and user feedback throughout the application"
+    ],
+    "impact": [
+      "Created complete restaurant e-commerce solution with modern web technologies",
+      "Enabled restaurants to manage their menu and process online orders efficiently",
+      "Provided seamless shopping experience with advanced cart and payment functionality",
+      "Demonstrated full-stack development skills with MERN stack implementation",
+      "Built scalable platform that can handle multiple restaurants and product categories",
+      "Implemented secure payment processing ensuring customer data protection"
+    ],
+    "architecture": {
+      "frontend": "React 18 with Tailwind CSS, Redux Toolkit, React Router DOM, React Icons",
+      "backend": "Node.js with Express.js, MongoDB with Mongoose ODM, CORS middleware",
+      "authentication": "Custom authentication system with user profile management and image upload",
+      "payment": "Stripe API integration with secure checkout sessions and webhook handling",
+      "state_management": "Redux Toolkit with product and user slices for centralized state",
+      "image_handling": "FileReader API for base64 conversion and client-side image processing",
+      "routing": "React Router DOM with protected routes and dynamic navigation",
+      "styling": "Tailwind CSS with responsive design and mobile-first approach",
+      "deployment": "Frontend on Vercel, Backend on Render, Database on MongoDB Atlas"
+    }
+  }
 ];
 
 export const techStack = [
@@ -442,7 +533,6 @@ export const techStack = [
       { name: "GraphQL", icon: "🔷", color: "#E10098" },
       { name: "WebSockets", icon: "📡", color: "#5A29E4" },
       { name: "Microservices", icon: "🏗️", color: "#00D4AA" },
-      { name: "JWT", icon: "🔐", color: "#000000" },
       { name: "OAuth 2.0", icon: "🔑", color: "#FF9900" },
       { name: "WebRTC", icon: "📹", color: "#333333" },
     ],
@@ -450,16 +540,16 @@ export const techStack = [
 ];
 
 export const personalInfo = {
-  name: "Digamber Mehta",
-  title: "Full Stack Developer & AI Enthusiast",
+  name: "Jason McLachlan",
+  title: "Full Stack Developer & AI Solutions Architect",
 
   email: "digambermehta2603@gmail.com",
   github: "https://github.com/digambermehta",
   linkedin: "https://linkedin.com/in/digambermehta",
   twitter: "https://twitter.com/digambermehta",
   avatar: "/profile/profile.png",
-  bio: "Full-stack developer specializing in AI-powered SaaS platforms and automation solutions. Built AutoBidder, a comprehensive freelancer automation platform integrating multiple AI models (OpenAI, Gemini, DeepSeek) with real-time bidding systems. Experienced in creating scalable React applications, Node.js APIs, payment integrations, and intelligent automation workflows. Passionate about leveraging cutting-edge AI technologies to solve real-world business challenges.",
-  experience: "2+ Years",
-  projectsCompleted: "20+",
+  bio: "I craft intelligent digital solutions that transform ideas into reality. With expertise in full-stack development and AI integration, I build scalable applications that drive business growth. From concept to deployment, I specialize in creating seamless user experiences powered by cutting-edge technology. My passion lies in solving complex problems through innovative code and strategic thinking.",
+  experience: "3+ Years",
+  projectsCompleted: "25+",
   clientsSatisfied: "100%",
 };
