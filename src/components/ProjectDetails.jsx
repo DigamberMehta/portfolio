@@ -94,8 +94,8 @@ export const ProjectDetails = () => {
               />
             </div>
 
-            {/* Mobile Quick Actions */}
-            {project.liveUrl && project.liveUrl.trim() !== "" && (
+            {/* Mobile Quick Actions - Visit button commented out */}
+            {/* {project.liveUrl && project.liveUrl.trim() !== "" && (
               <div className="space-y-3">
                 <a
                   href={project.liveUrl}
@@ -108,7 +108,7 @@ export const ProjectDetails = () => {
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
-            )}
+            )} */}
 
             {/* Mobile Quick Stats */}
             <div className="grid grid-cols-2 gap-3">
@@ -558,8 +558,8 @@ export const ProjectDetails = () => {
                 </div>
               </div>
 
-              {/* Project Links */}
-              {project.liveUrl && project.liveUrl.trim() !== "" && (
+              {/* Project Links - Visit button commented out */}
+              {/* {project.liveUrl && project.liveUrl.trim() !== "" && (
                 <div className="space-y-3">
                   <a
                     href={project.liveUrl}
@@ -572,7 +572,7 @@ export const ProjectDetails = () => {
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
-              )}
+              )} */}
             </motion.div>
           </div>
         </div>

@@ -124,7 +124,8 @@ export const Projects = () => {
                   {/* Overlay - Mobile optimized */}
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex gap-2 sm:gap-3">
-                      {project.liveUrl ? (
+                      {/* Demo buttons commented out */}
+                      {/* {project.liveUrl ? (
                         <motion.a
                           href={project.liveUrl}
                           target="_blank"
@@ -146,7 +147,7 @@ export const Projects = () => {
                           </span>
                           <span className="sm:hidden">Contact</span>
                         </motion.div>
-                      )}
+                      )} */}
                       <motion.a
                         href={project.githubUrl}
                         target="_blank"
