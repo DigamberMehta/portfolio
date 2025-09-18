@@ -132,7 +132,7 @@ export const Projects = () => {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.95 }}
-                          className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 bg-cyan-500 text-white rounded-lg font-medium cursor-pointer touch-manipulation text-sm sm:text-base"
+                          className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 bg-cyan-500 text-white rounded-lg font-medium cursor-pointer text-sm sm:text-base"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <Play className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -154,7 +154,7 @@ export const Projects = () => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 bg-gray-800 text-white rounded-lg font-medium cursor-pointer touch-manipulation text-sm sm:text-base"
+                        className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 bg-gray-800 text-white rounded-lg font-medium cursor-pointer text-sm sm:text-base"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <Code className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -255,7 +255,7 @@ export const Projects = () => {
                           window.location.href = `/project/${project.id}`;
                         }
                       }}
-                      className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#00d4ff]/25 transition-all duration-300 flex-1 justify-center shadow-xl touch-manipulation text-sm sm:text-base"
+                      className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#00d4ff]/25 transition-all duration-300 flex-1 justify-center shadow-xl text-sm sm:text-base"
                       style={{
                         pointerEvents: "auto",
                         zIndex: 10,
@@ -278,7 +278,7 @@ export const Projects = () => {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer touch-manipulation"
+                        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer"
                         whileHover={{ x: 4 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={(e) => e.stopPropagation()}
@@ -296,7 +296,7 @@ export const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 text-gray-400 hover:text-white transition-colors cursor-pointer touch-manipulation"
+                      className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 text-gray-400 hover:text-white transition-colors cursor-pointer"
                       whileHover={{ x: 4 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={(e) => e.stopPropagation()}

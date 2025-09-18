@@ -504,7 +504,7 @@
 }
 
 .mobile-button {
-  @apply px-4 py-3 sm:px-6 sm:py-4 rounded-lg font-medium transition-all duration-300 touch-manipulation;
+  @apply px-4 py-3 sm:px-6 sm:py-4 rounded-lg font-medium transition-all duration-300;
 }
 
 .mobile-input {

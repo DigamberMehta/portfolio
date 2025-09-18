@@ -83,7 +83,7 @@ export const Navigation = ({ darkMode, toggleDarkMode }) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
-            className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent cursor-pointer touch-manipulation font-mono"
+            className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent cursor-pointer font-mono"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection("hero")}
@@ -120,7 +120,7 @@ export const Navigation = ({ darkMode, toggleDarkMode }) => {
           {/* Actions */}
           <div className="flex items-center space-x-2 sm:space-x-4">
             <motion.button
-              className="p-2 sm:p-2.5 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors cursor-pointer touch-manipulation"
+              className="p-2 sm:p-2.5 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleDarkMode}
@@ -137,7 +137,7 @@ export const Navigation = ({ darkMode, toggleDarkMode }) => {
 
             {/* Mobile Menu Button */}
             <motion.button
-              className="md:hidden p-2 sm:p-2.5 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors cursor-pointer touch-manipulation"
+              className="md:hidden p-2 sm:p-2.5 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -174,7 +174,7 @@ export const Navigation = ({ darkMode, toggleDarkMode }) => {
                     delay: index * 0.1,
                     ease: "easeOut",
                   }}
-                  className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+                  className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 cursor-pointer ${
                     activeSection === item.id
                       ? "text-cyan-400 bg-gray-800/70 border border-cyan-400/30"
                       : "text-gray-300 hover:text-white hover:bg-gray-800/50 border border-transparent"

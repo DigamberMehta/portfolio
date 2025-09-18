@@ -84,7 +84,7 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                     e.stopPropagation();
                     prevImage();
                   }}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 touch-manipulation"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
                   aria-label="Previous image"
                 >
                   <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -94,7 +94,7 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                     e.stopPropagation();
                     nextImage();
                   }}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 touch-manipulation"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
                   aria-label="Next image"
                 >
                   <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -113,7 +113,7 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                 e.stopPropagation();
                 openFullscreen();
               }}
-              className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 touch-manipulation"
+              className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
               aria-label="Open fullscreen"
             >
               <svg
@@ -140,7 +140,7 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                   <button
                     key={index}
                     onClick={() => goToImage(index)}
-                    className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 touch-manipulation ${
+                    className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
                       index === currentIndex
                         ? "border-[#00d4ff] scale-110"
                         : "border-[#2a2a2a] hover:border-[#3a3a3a]"
@@ -173,7 +173,7 @@ export const ImageCarousel = ({ images, projectTitle }) => {
             {/* Close Button - Mobile Optimized */}
             <button
               onClick={closeFullscreen}
-              className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full z-10 hover:scale-110 transition-all duration-300 touch-manipulation"
+              className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-black/70 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full z-10 hover:scale-110 transition-all duration-300"
               aria-label="Close fullscreen"
             >
               <X className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -202,14 +202,14 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-2 sm:left-8 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 sm:p-4 rounded-full hover:scale-110 transition-all duration-300 touch-manipulation"
+                    className="absolute left-2 sm:left-8 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 sm:p-4 rounded-full hover:scale-110 transition-all duration-300"
                     aria-label="Previous image"
                   >
                     <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-2 sm:right-8 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 sm:p-4 rounded-full hover:scale-110 transition-all duration-300 touch-manipulation"
+                    className="absolute right-2 sm:right-8 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 sm:p-4 rounded-full hover:scale-110 transition-all duration-300"
                     aria-label="Next image"
                   >
                     <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
@@ -222,7 +222,7 @@ export const ImageCarousel = ({ images, projectTitle }) => {
                         <button
                           key={index}
                           onClick={() => goToImage(index)}
-                          className={`w-8 h-8 sm:w-12 sm:h-12 rounded-lg overflow-hidden border-2 transition-all duration-300 flex-shrink-0 touch-manipulation ${
+                          className={`w-8 h-8 sm:w-12 sm:h-12 rounded-lg overflow-hidden border-2 transition-all duration-300 flex-shrink-0 ${
                             index === currentIndex
                               ? "border-cyan-400 scale-110"
                               : "border-gray-600 hover:border-gray-400"
