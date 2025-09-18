@@ -82,7 +82,7 @@ export const projects = [
     },
   },
 
-  {
+  /*{
     id: "2",
     title: "AutoBidder - Freelancer.com Automation Platform",
     description:
@@ -174,8 +174,8 @@ export const projects = [
       deployment:
         "Frontend on Vercel, Backend on Railway/Render, Database on MongoDB Atlas",
     },
-  },
-  {
+  },*/
+  /*{
     id: "3",
     title: "ProPulse - AI-Powered Job Proposal Generator",
     description:
@@ -281,7 +281,7 @@ export const projects = [
       deployment:
         "Frontend on Vercel, Backend on Railway/Render, Database on MongoDB Atlas",
     },
-  },
+  },*/
 
   
   {
