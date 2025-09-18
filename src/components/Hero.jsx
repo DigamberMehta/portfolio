@@ -14,15 +14,23 @@ export const Hero = () => {
   const activeSection = useScrollSpy([
     "hero",
     "about",
+    "offer",
     "projects",
     "tech",
     "contact",
   ]);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16"
     >
       {/* Enhanced 3D Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -164,45 +172,47 @@ export const Hero = () => {
 
         {/* Enhanced CTA Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full max-w-md sm:max-w-none"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group"
+            onClick={() => scrollToSection("projects")}
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold text-base sm:text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center justify-center gap-2">
               View Projects
               <motion.div
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1, repeat: Infinity }}
               >
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.div>
             </span>
           </motion.button>
 
           <motion.button
-            className="px-8 py-4 border-2 border-white/20 text-white rounded-full font-semibold text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group"
+            onClick={() => scrollToSection("contact")}
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/20 text-white rounded-full font-semibold text-base sm:text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group"
             whileHover={{
               scale: 1.05,
               borderColor: "rgba(59, 130, 246, 0.5)",
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center justify-center gap-2">
               Contact Me
               <motion.div
                 animate={{ rotate: [0, 15, 0] }}
                 transition={{ duration: 1, repeat: Infinity }}
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.div>
             </span>
           </motion.button>
