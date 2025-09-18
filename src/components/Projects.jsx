@@ -148,7 +148,8 @@ export const Projects = () => {
                           <span className="sm:hidden">Contact</span>
                         </motion.div>
                       )} */}
-                      <motion.a
+                      {/* GitHub link commented out */}
+                      {/* <motion.a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -160,7 +161,7 @@ export const Projects = () => {
                         <Code className="w-3 h-3 sm:w-4 sm:h-4" />
                         <span className="hidden sm:inline">Source Code</span>
                         <span className="sm:hidden">Code</span>
-                      </motion.a>
+                      </motion.a> */}
                     </div>
                   </div>
 
@@ -292,7 +293,8 @@ export const Projects = () => {
                         <Globe className="w-3 h-3 sm:w-4 sm:h-4" />
                       </motion.div>
                     )}
-                    <motion.a
+                    {/* GitHub link commented out */}
+                    {/* <motion.a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -302,7 +304,7 @@ export const Projects = () => {
                       onClick={(e) => e.stopPropagation()}
                     >
                       <Github className="w-3 h-3 sm:w-4 sm:h-4" />
-                    </motion.a>
+                    </motion.a> */}
                   </div>
                 </div>
               </div>
