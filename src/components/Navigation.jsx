@@ -119,7 +119,8 @@ export const Navigation = ({ darkMode, toggleDarkMode }) => {
 
           {/* Actions */}
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <motion.button
+            {/* Dark Mode Toggle - Hidden */}
+            {/* <motion.button
               className="p-2 sm:p-2.5 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -133,7 +134,7 @@ export const Navigation = ({ darkMode, toggleDarkMode }) => {
               ) : (
                 <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-300" />
               )}
-            </motion.button>
+            </motion.button> */}
 
             {/* Mobile Menu Button */}
             <motion.button
