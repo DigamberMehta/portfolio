@@ -543,7 +543,7 @@ export const personalInfo = {
   name: "Jason McLachlan",
   title: "Full Stack Developer & AI Solutions Architect",
 
-  email: "digambermehta2603@gmail.com",
+  email: "jay@viralmarketing.co.za",
   github: "https://github.com/digambermehta",
   linkedin: "https://linkedin.com/in/digambermehta",
   twitter: "https://twitter.com/digambermehta",
